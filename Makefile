@@ -4,7 +4,7 @@ deps:
 lint:
 	flake8 hello_world test
 run:
-	python main.py 
+	PYTHONPATH=. FLASK_APP=hello_world flask run 
 .PHONY: test	
 test:
 	PYTHONPATH=. py.test --verbose -s
